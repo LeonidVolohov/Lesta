@@ -1,12 +1,17 @@
 from collections import deque
 
+"""
+
+
+
+"""
+
 class CircularBuffer():
     def __init__(self, length: int) -> None:
         self._data = []
         self._index = 0
         self._length = length
 
-    # TODO: fix wrong adding
     def append_element(self, item) -> None:
         if len(self._data) == self._length:
             self._data[self._index] = item
@@ -33,7 +38,6 @@ def main():
     for i in range(7):
         circular_buffer.append_element(i)
         print(circular_buffer.get_data())
-    print(circular_buffer.get_element(-1))
 
     print("--------------")
 
